@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem Solve Online Judge</title>
+    <link rel="icon" href="/logo.png" type="image/png">
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Monoton&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="logins">
+        <a href="/SignUp" class="signup">회원 가입</a>
+        <a href="/login" class="login">로그인</a>
+    </div>
+
+    <div id="upbar">
+        <img src="/sitebannerlogo.png" alt="">
+        <div id="menu">
+            <a href="#">문제</a>
+            <a href="#">대회</a>
+            <a href="#">순위</a>     
+            <a href="#">커뮤니티</a>  
+            <a href="#">소속</a>     
+            <a href="#">검색</a>
+        </div>
+    </div>
+
+    <div id="banner">
+        <p>Problem Solve Online Judge(미완성)</p>
+    </div>
+</body>
+
+<style>
+    body{
+        font-family: "Jua";
+        margin: 0;
+    }
+
+    #logins{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .login,.signup{
+        color: black;
+        text-decoration: none;
+    }
+
+    .login:hover,.signup:hover{
+        text-decoration: underline;
+    }
+
+    #upbar{
+        width: 80%;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #upbar img{
+        width: 120px;
+    }
+
+    #menu{
+        display: flex;
+        gap: 30px;
+    }
+
+    #menu a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    #menu a:hover{
+        text-decoration: underline;
+    }
+
+    #banner{
+        height: 20vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner p{
+        font-family: "Monoton", cursive;
+        font-size: 3rem;
+    }
+</style>
+</html>
