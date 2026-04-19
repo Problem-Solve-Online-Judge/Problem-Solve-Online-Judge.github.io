@@ -13,10 +13,7 @@
 </head>
 
 <body>
-    <div id="logins">
-        <a href="/SignUp" class="signup">회원 가입</a>
-        <a href="/login" class="login">로그인</a>
-    </div>
+    
 
     <div id="upbar">
         <img src="/sitebannerlogo.png" alt="">
@@ -28,10 +25,14 @@
             <a href="#">소속</a>     
             <a href="#">검색</a>
         </div>
+        <div id="logins">
+            <a href="/SignUp" class="signup">회원 가입</a>
+            <a href="/login" class="login">로그인</a>
+        </div>
     </div>
 
     <div id="banner">
-        <p>Problem Solve Online Judge(pre-α)</p>
+        <p style="color: white;">Solve your world.</p>
     </div>
 </body>
 
@@ -58,6 +59,12 @@
     }
 
     #upbar{
+        border-radius: 10px;
+        padding : 10px;
+        /* x-오프셋 | y-오프셋 | 흐림 정도 | 그림자 크기 | 색상 */
+        box-shadow: 10px 10px 20px rgba(197, 255, 158, 0.383);
+      
+        outline: 1px solid black;
         width: 80%;
         margin: 10px auto;
         display: flex;
@@ -85,7 +92,11 @@
     }
 
     #banner{
-        height: 20vh;
+        margin-top: 30px;
+        background-size: cover;
+        background-image: url(/banner.jpg);
+        outline: 1px solid black;
+        height: 60vh;
         width: 100vw;
         display: flex;
         justify-content: center;
