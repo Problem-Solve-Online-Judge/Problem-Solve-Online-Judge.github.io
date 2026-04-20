@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <link rel="icon" href="/logo.png" type="image/png">
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Monoton&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    
+
+    <div id="upbar">
+        <img src="/sitebannerlogo.png" alt="">
+        <div id="menu">
+            <a href="#">문제</a>
+            <a href="#">대회</a>
+            <a href="#">순위</a>     
+            <a href="#">커뮤니티</a>  
+            <a href="#">소속</a>     
+            <a href="#">검색</a>
+        </div>
+        <div id="logins">
+            <a href="/SignUp" class="signup">회원 가입</a>
+            <a href="/LogIn" class="login">로그인</a>
+        </div>
+    </div>
+    <div id="notice">
+        <p>현제 페이지는 Pre-α Test 중입니다.</p>
+    </div>
+   <div id="form">
+    <p id="SignUp_txt"> 이용 약관(V-1)</p>
+    <p>
+        <sp>준비중</sp>
+    </p>
+   </div>
+</body>
+
+<style>
+    #notice p{
+        background-color:rgb(197, 255, 158);
+        color: rgb(21, 98, 0);
+        text-align: center;
+        margin-bottom: 0;
+    }
+    body{
+        font-family: "Jua";
+        margin: 0;
+    }
+
+    #logins{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .login,.signup{
+        color: black;
+        text-decoration: none;
+    }
+
+    .login:hover,.signup:hover{
+        text-decoration: underline;
+    }
+
+    #upbar{
+        border-radius: 10px;
+        padding : 10px;
+        /* x-오프셋 | y-오프셋 | 흐림 정도 | 그림자 크기 | 색상 */
+        box-shadow: 10px 10px 20px hsla(96, 100%, 81%, 0.383);
+      
+        outline: 1px solid black;
+        width: 80%;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #upbar img{
+        width: 120px;
+    }
+
+    #menu{
+        display: flex;
+        gap: 30px;
+    }
+
+    #menu a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    #menu a:hover{
+        text-decoration: underline;
+    }
+
+    #banner{
+        margin-top: 7px;
+        background-size: cover;
+        background-image: url(/banner.jpg);
+        outline: 1px solid black;
+        height: 60vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #banner p{
+        font-family: "Monoton", cursive;
+        font-size: 3rem;
+    }
+    ::selection {
+        color: #012307fe;  background-color: hsla(96, 100%, 81%, 1);
+    }
+</style>
+</html>

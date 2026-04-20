@@ -2,11 +2,178 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="/logo.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <link rel="icon" href="/logo.png" type="image/png">
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&family=Monoton&family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
 </head>
+
 <body>
     
+    <div id="upbar">
+        <img src="/sitebannerlogo.png" alt="SolveBits 로고">
+        <div id="menu">
+            <a href="#">문제</a>
+            <a href="#">대회</a>
+            <a href="#">순위</a>     
+            <a href="#">커뮤니티</a>  
+            <a href="#">소속</a>     
+            <a href="#">검색</a>
+        </div>
+        <div id="logins">
+            <a href="/SignUp" class="signup">회원 가입</a>
+            <a href="/LogIn" class="login">로그인</a>
+        </div>
+    </div>
+
+    <div id="notice">
+        <p>현재 페이지는 Pre-α Test 중입니다.</p>
+    </div>
+
+    <form id="form" action="/SignUp" method="post">
+        <p class="SignUp_txt">회원가입</p>
+        <p>가입을 하기 전에 SolveBits의 이용약관, 개인정보 처리방침 및 이용에 동의해야 합니다.</p>
+
+        <label>
+            <input type="checkbox">
+            <a href="/TermsOfService">이용약관</a>
+        </label>
+
+        <label>
+            <input type="checkbox">
+            <a href="/Privacy">개인정보 처리방침 및 이용</a>
+        </label>
+
+        <label>아이디</label>
+        <input type="text" name="username" placeholder="test">
+
+        <label>한 마디</label>
+        <input type="text" name="bio" placeholder="안녕하세요 홍길동입니다!">
+
+        <label>비밀번호</label>
+        <input type="password" name="password">
+
+        <label>비밀번호 확인</label>
+        <input type="password" name="password_confirm">
+
+        <label>이메일</label>
+        <input type="email" name="email" placeholder="test@gmail.com">
+
+        <p>캡차 자리</p>
+
+        <button type="button" onclick="signup()">가입</button>
+    </form>
+
 </body>
+
+<style>
+    
+    body{
+        font-family: "Jua", sans-serif;
+        margin: 0;
+    }
+
+    #form a{
+        text-decoration: none;
+        color: rgb(21, 98, 0);
+    }
+    #form button{
+        text-decoration: none;
+        background-color: rgb(203, 255, 188);
+        font-size: 120%;
+        border-radius: 10px;
+        font-family: "Jua", sans-serif;
+    }
+    #form input{
+        border-radius: 10px;
+        font-size: 120%;
+        font-family: "Jua", sans-serif;
+        accent-color: rgb(36, 168, 0);
+    }
+    #form a:hover{
+        text-decoration: underline;
+        color: rgb(21, 98, 0);
+    }
+    
+    #notice p{
+        background-color: rgb(197, 255, 158);
+        color: rgb(21, 98, 0);
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .SignUp_txt{
+        font-size: 150%;
+        text-align: center;
+    }
+
+    #upbar{
+        border-radius: 10px;
+        padding: 10px;
+        box-shadow: 10px 10px 20px hsla(96, 100%, 81%, 0.383);
+        outline: 1px solid black;
+        
+        width: 80%;
+        margin: 10px auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    #upbar img{
+        width: 120px;
+    }
+
+    #menu{
+        display: flex;
+        gap: 30px;
+    }
+
+    #menu a{
+        text-decoration: none;
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    #menu a:hover{
+        text-decoration: underline;
+    }
+
+    #logins{
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+        padding: 10px 20px;
+    }
+
+    .login, .signup{
+        color: black;
+        text-decoration: none;
+    }
+
+    .login:hover, .signup:hover{
+        text-decoration: underline;
+    }
+
+    #form{
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        outline: 1px solid black;
+        box-shadow: 10px 10px 20px hsla(96, 100%, 81%, 0.383);
+        border-radius: 20px;
+        gap: 10px;
+    }
+
+    ::selection {
+        color: #012307fe;
+        background-color: hsla(96, 100%, 81%, 1);
+    }
+</style>
 </html>
